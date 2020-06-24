@@ -7,7 +7,7 @@ Install node modules with yarn:
 $ yarn
 ```
 
-Optimized the extracted Webflow site:
+Optimized the exported Webflow archive:
 ```
 $ INPUT=./export.zip \
  OUTPUT=./build \
