@@ -78,4 +78,4 @@ const optimize = series(
   cleanTmp,
 );
 
-exports.default = series(optimize);
+exports.default = optimize;
