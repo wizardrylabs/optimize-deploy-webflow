@@ -65,15 +65,17 @@ const copy = () => {
 };
 
 const optimize = series(
-  cleanBuild,
-  unzip,
+  parallel(
+    cleanBuild,
+    unzip,
+  ),
   parallel(
     css,
     js,
     html,
     copy,
   ),
-  cleanTmp
+  cleanTmp,
 );
 
 exports.default = series(optimize);
